@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "api\api.csproj", "{0F6F0BAB-3349-48C2-8090-EEDF391300AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "api.csproj", "{37C3F646-B402-4BF4-811B-5166EA98AFBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0F6F0BAB-3349-48C2-8090-EEDF391300AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F6F0BAB-3349-48C2-8090-EEDF391300AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F6F0BAB-3349-48C2-8090-EEDF391300AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F6F0BAB-3349-48C2-8090-EEDF391300AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37C3F646-B402-4BF4-811B-5166EA98AFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C3F646-B402-4BF4-811B-5166EA98AFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C3F646-B402-4BF4-811B-5166EA98AFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C3F646-B402-4BF4-811B-5166EA98AFBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
