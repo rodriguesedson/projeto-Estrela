@@ -9,10 +9,12 @@ namespace api.Services;
 public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
+    private readonly ISendEmailService _emailService;
     
-    public UserService(IUserRepository userRepository)
+    public UserService(IUserRepository userRepository, ISendEmailService service)
     {
         _userRepository = userRepository;
+        _emailService = service;
     }
 
     public async Task<IEnumerable<UserResponse>> GetAllUsersAsync()
