@@ -16,9 +16,9 @@ public class SendEmailService : ISendEmailService
 
     public void SendTestMessage(EmailDto emailDto)
     {
-        var from = new MailAddress(emailDto.From);
-        var to = new MailAddress(emailDto.To);
         var credentials = _configuration.GetSection("Credentials");
+        var from = new MailAddress(credentials["From"]);
+        var to = new MailAddress(emailDto.To);
         
         MailMessage message = new MailMessage(from, to)
         {

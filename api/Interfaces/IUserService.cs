@@ -6,6 +6,6 @@ namespace api.Interfaces;
 
 public interface IUserService
 {
-    Task<IEnumerable<UserResponse>> GetAllUsersAsync();
-    Task<string> RegisterUserAsync(UserRequest request);
+    Task<IEnumerable<UserResponse>> GetAllAsync();
+    Task<string> RegisterAsync(UserRequest request);
 }

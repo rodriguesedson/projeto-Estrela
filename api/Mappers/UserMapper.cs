@@ -8,7 +8,7 @@ public static class UserMapper
 {
     public static User ToEntity(UserRequest request)
     {
-        return new User(request.Email, request.Name);
+        return new User(request.Email, request.Name, request.BirthDate);
     }
 
     public static List<UserResponse> ToUserResponseList(List<User> usersList)
@@ -21,6 +21,7 @@ public static class UserMapper
                 Id = user.Id,
                 Email = user.Email,
                 Name = user.Name,
+                BirthDate = user.BirthDate,
                 Role = user.Role.ToString()
             };
             mappedList.Add(formatedUser);

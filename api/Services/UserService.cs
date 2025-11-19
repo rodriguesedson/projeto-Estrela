@@ -1,6 +1,7 @@
 using api.Enums;
 using api.Interfaces;
 using api.Mappers;
+using api.Models.Dtos;
 using api.Models.Requests;
 using api.Models.Responses;
 
@@ -11,19 +12,19 @@ public class UserService : IUserService
     private readonly IUserRepository _userRepository;
     private readonly ISendEmailService _emailService;
     
-    public UserService(IUserRepository userRepository, ISendEmailService service)
+    public UserService(IUserRepository userRepository, ISendEmailService emailService)
     {
         _userRepository = userRepository;
-        _emailService = service;
+        _emailService = emailService;
     }
 
-    public async Task<IEnumerable<UserResponse>> GetAllUsersAsync()
+    public async Task<IEnumerable<UserResponse>> GetAllAsync()
     {
         var list = await _userRepository.GetAllUsers();
         return UserMapper.ToUserResponseList(list.ToList());
     }
     
-    public async Task<string> RegisterUserAsync(UserRequest request)
+    public async Task<string> RegisterAsync(UserRequest request)
     {
         var list = await _userRepository.GetAllUsers();
         var id = list.Count();
@@ -34,6 +35,10 @@ public class UserService : IUserService
         try
         {
             var response = await _userRepository.RegisterUser(newUser);
+            const string SUBJECT = "Nova conta";
+            const string BODY = "Nova conta criada com sucesso! Use o email cadastrado para acessá-la";
+            var newEmail = new EmailDto(newUser.Email, SUBJECT, BODY);
+            _emailService.SendTestMessage(newEmail);
             return response;
         }
         catch

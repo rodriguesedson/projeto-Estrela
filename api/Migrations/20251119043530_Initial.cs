@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -18,6 +19,7 @@ namespace api.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Email = table.Column<string>(type: "TEXT", nullable: false),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
+                    BirthDate = table.Column<DateOnly>(type: "TEXT", nullable: false),
                     Role = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
