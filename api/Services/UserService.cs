@@ -23,6 +23,13 @@ public class UserService : IUserService
         var list = await _userRepository.GetAllUsers();
         return UserMapper.ToUserResponseList(list.ToList());
     }
+
+    public async Task<UserResponse> GetByEmailAsync(string email)
+    {
+        var user = await _userRepository.GetUserByEmailAsync(email);
+        if (user is null) throw new Exception("Usuário não encontrado");
+        return UserMapper.ToResponse(user);
+    }
     
     public async Task<string> RegisterAsync(UserRequest request)
     {
@@ -31,9 +38,12 @@ public class UserService : IUserService
         var newUser = UserMapper.ToEntity(request);
         newUser.Id = id;
         newUser.Role = Role.Student;
-
+        
         try
         {
+            var search = await _userRepository.GetUserByEmailAsync(newUser.Email);
+            if (search is not null) throw new Exception("Email já registrado");
+        
             var response = await _userRepository.RegisterUser(newUser);
             const string SUBJECT = "Nova conta";
             const string BODY = "Nova conta criada com sucesso! Use o email cadastrado para acessá-la";
@@ -41,9 +51,9 @@ public class UserService : IUserService
             _emailService.SendTestMessage(newEmail);
             return response;
         }
-        catch
+        catch (Exception ex)
         {
-            throw new Exception("Não foi possível registrar o usuário");
+            throw new Exception("Não foi possível registrar o usuário: " + ex.Message);
         }
     }
 }

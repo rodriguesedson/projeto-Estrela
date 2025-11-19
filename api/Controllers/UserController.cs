@@ -21,6 +21,12 @@ public class UserController: ControllerBase
     {
         return await _userService.GetAllAsync();
     }
+
+    [HttpGet("{email}")]
+    public async Task<UserResponse> GetUserByEmailAsync([FromRoute] string email)
+    {
+        return await _userService.GetByEmailAsync(email);
+    }
     
     [HttpPost]
     public async Task<string> Register([FromBody] UserRequest request)

@@ -11,6 +11,18 @@ public static class UserMapper
         return new User(request.Email, request.Name, request.BirthDate);
     }
 
+    public static UserResponse ToResponse(User user)
+    {
+        return new UserResponse()
+        {
+            Id = user.Id,
+            Email = user.Email,
+            Name = user.Name,
+            BirthDate = user.BirthDate,
+            Role = user.Role.ToString()
+        };
+    }
+
     public static List<UserResponse> ToUserResponseList(List<User> usersList)
     {
         var mappedList = new List<UserResponse>();
