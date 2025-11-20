@@ -35,7 +35,7 @@ public class UserController: ControllerBase
     }
 
     [HttpPut("/edit/{id}")]
-    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UserUpdateRequest request)
+    public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UserUpdateRequest request)
     {
         return Ok(await _userService.UpdateAsync(id, request));
     }

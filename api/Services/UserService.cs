@@ -31,7 +31,7 @@ public class UserService : IUserService
         return UserMapper.ToResponse(user);
     }
 
-    public async Task<UserResponse> GetByIdAsync(int id)
+    public async Task<UserResponse> GetByIdAsync(Guid id)
     {
         var user = await _userRepository.GetUserByIdAsync(id);
         if (user is null) throw new Exception("Usuário não encontrado");
@@ -40,11 +40,9 @@ public class UserService : IUserService
     
     public async Task<UserResponse> RegisterAsync(UserRequest request)
     {
-        var list = await _userRepository.GetAllUsers();
-        var id = list.Count();
         var newUser = UserMapper.ToEntity(request);
-        newUser.Id = id;
         newUser.Role = Role.Student;
+        newUser.IsActive = true;
         
         try
         {
@@ -64,7 +62,7 @@ public class UserService : IUserService
         }
     }
 
-    public async Task<UserResponse> UpdateAsync(int id, UserUpdateRequest request)
+    public async Task<UserResponse> UpdateAsync(Guid id, UserUpdateRequest request)
     {
         var user = await _userRepository.GetUserByIdAsync(id);
         if (!user.Email.Equals(request.Email))

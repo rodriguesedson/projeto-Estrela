@@ -19,7 +19,8 @@ public static class UserMapper
             Email = user.Email,
             Name = user.Name,
             BirthDate = user.BirthDate,
-            Role = user.Role.ToString()
+            Role = user.Role.ToString(),
+            IsActive = user.IsActive
         };
     }
 
@@ -34,7 +35,8 @@ public static class UserMapper
                 Email = user.Email,
                 Name = user.Name,
                 BirthDate = user.BirthDate,
-                Role = user.Role.ToString()
+                Role = user.Role.ToString(),
+                IsActive = user.IsActive
             };
             mappedList.Add(formatedUser);
         });

@@ -11,7 +11,7 @@ using api.Contexts;
 namespace api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20251119043530_Initial")]
+    [Migration("20251120231445_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -22,9 +22,9 @@ namespace api.Migrations
 
             modelBuilder.Entity("api.Entities.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateOnly>("BirthDate")
                         .HasColumnType("TEXT");
@@ -32,6 +32,9 @@ namespace api.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .IsRequired()

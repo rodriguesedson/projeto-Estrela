@@ -166,3 +166,5 @@ fabric.properties
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,dotnetcore,react
+
+appsettings.Development.json
