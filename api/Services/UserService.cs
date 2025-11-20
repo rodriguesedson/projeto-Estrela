@@ -30,8 +30,15 @@ public class UserService : IUserService
         if (user is null) throw new Exception("Usuário não encontrado");
         return UserMapper.ToResponse(user);
     }
+
+    public async Task<UserResponse> GetByIdAsync(int id)
+    {
+        var user = await _userRepository.GetUserByIdAsync(id);
+        if (user is null) throw new Exception("Usuário não encontrado");
+        return UserMapper.ToResponse(user);
+    }
     
-    public async Task<string> RegisterAsync(UserRequest request)
+    public async Task<UserResponse> RegisterAsync(UserRequest request)
     {
         var list = await _userRepository.GetAllUsers();
         var id = list.Count();
@@ -44,16 +51,43 @@ public class UserService : IUserService
             var search = await _userRepository.GetUserByEmailAsync(newUser.Email);
             if (search is not null) throw new Exception("Email já registrado");
         
-            var response = await _userRepository.RegisterUser(newUser);
+            await _userRepository.RegisterUser(newUser);
             const string SUBJECT = "Nova conta";
             const string BODY = "Nova conta criada com sucesso! Use o email cadastrado para acessá-la";
             var newEmail = new EmailDto(newUser.Email, SUBJECT, BODY);
             _emailService.SendTestMessage(newEmail);
-            return response;
+            return UserMapper.ToResponse(newUser);
         }
         catch (Exception ex)
         {
             throw new Exception("Não foi possível registrar o usuário: " + ex.Message);
+        }
+    }
+
+    public async Task<UserResponse> UpdateAsync(int id, UserUpdateRequest request)
+    {
+        var user = await _userRepository.GetUserByIdAsync(id);
+        if (!user.Email.Equals(request.Email))
+        {
+            var search = await _userRepository.GetUserByEmailAsync(request.Email);
+            if (search is not null) throw new Exception("Não foi possível adicionar o email informado (já existe uma conta vinculada)");
+        }
+        user.Email = request.Email;
+        user.Name = request.Name;
+        user.BirthDate = request.BirthDate;
+
+        try
+        {
+            await _userRepository.EditUser(user);
+            const string SUBJECT = "Edição de cadastro";
+            const string BODY = "Conta editada com sucesso! Use o email cadastrado para acessá-la";
+            var newEmail = new EmailDto(user.Email, SUBJECT, BODY);
+            _emailService.SendTestMessage(newEmail);
+            return  UserMapper.ToResponse(user);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Não foi possível editar o usuário: " + ex.Message);
         }
     }
 }

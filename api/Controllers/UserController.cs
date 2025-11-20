@@ -22,16 +22,21 @@ public class UserController: ControllerBase
         return await _userService.GetAllAsync();
     }
 
-    [HttpGet("{email}")]
-    public async Task<UserResponse> GetUserByEmailAsync([FromRoute] string email)
+    [HttpGet("/find/{email}")]
+    public async Task<UserResponse> GetByEmailAsync([FromRoute] string email)
     {
         return await _userService.GetByEmailAsync(email);
     }
     
-    [HttpPost]
-    public async Task<string> Register([FromBody] UserRequest request)
+    [HttpPost("/register")]
+    public async Task<IActionResult> Register([FromBody] UserRequest request)
     {
-        var response = await _userService.RegisterAsync(request);
-        return response;
+        return Ok(await _userService.RegisterAsync(request));
+    }
+
+    [HttpPut("/edit/{id}")]
+    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UserUpdateRequest request)
+    {
+        return Ok(await _userService.UpdateAsync(id, request));
     }
 }

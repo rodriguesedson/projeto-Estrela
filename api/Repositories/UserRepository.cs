@@ -24,11 +24,20 @@ public class UserRepository : IUserRepository
         return await _context.Users.FirstOrDefaultAsync(x => x.Email == email);
     }
 
-    public async Task<string> RegisterUser(User user)
+    public async Task<User?> GetUserByIdAsync(int id)
+    {
+        return await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
+    }
+
+    public async Task RegisterUser(User user)
     {
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
+    }
 
-        return $"Usuário {user.Name} registrado";
+    public async Task EditUser(User user)
+    {
+        _context.Users.Update(user);
+        await _context.SaveChangesAsync();
     }
 }

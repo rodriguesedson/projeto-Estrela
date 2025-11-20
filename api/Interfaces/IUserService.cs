@@ -1,5 +1,3 @@
-using api.Entities;
-using api.Models.Dtos;
 using api.Models.Requests;
 using api.Models.Responses;
 
@@ -9,5 +7,7 @@ public interface IUserService
 {
     Task<IEnumerable<UserResponse>> GetAllAsync();
     Task<UserResponse> GetByEmailAsync(string email);
-    Task<string> RegisterAsync(UserRequest request);
+    Task<UserResponse> GetByIdAsync(int id);
+    Task<UserResponse> RegisterAsync(UserRequest request);
+    Task<UserResponse> UpdateAsync(int id, UserUpdateRequest request);
 }
