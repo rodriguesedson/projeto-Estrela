@@ -1,5 +1,6 @@
 using api.Contexts;
 using api.Interfaces;
+using api.Middlewares;
 using api.Repositories;
 using api.Services;
 using Microsoft.EntityFrameworkCore;
@@ -38,5 +39,7 @@ app.UseHttpsRedirection();
 // app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.Run();

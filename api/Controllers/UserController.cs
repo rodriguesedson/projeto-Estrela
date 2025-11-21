@@ -45,4 +45,16 @@ public class UserController: ControllerBase
     {
         return Ok(await _userService.UpdateAsync(id, request));
     }
+
+    [HttpPut("/deactivate/{id}")]
+    public async Task<IActionResult> Deactivate([FromRoute] Guid id)
+    {
+        return Ok(await _userService.DeactivateAsync(id));
+    }
+
+    [HttpPut("/reactivate/{id}")]
+    public async Task<IActionResult> Reactivate([FromRoute] Guid id)
+    {
+        return Ok(await _userService.ReactivateAsync(id));
+    }
 }

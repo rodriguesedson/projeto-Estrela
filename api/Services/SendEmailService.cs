@@ -40,7 +40,7 @@ public class SendEmailService : ISendEmailService
         {
             client.Send(message);
         }
-        catch (Exception ex)
+        catch (CustomException ex)
         {
             Console.WriteLine("Failed to send message: {0}", ex.Message);
         }

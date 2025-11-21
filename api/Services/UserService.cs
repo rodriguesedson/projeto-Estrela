@@ -1,9 +1,11 @@
+using System.Net;
 using api.Enums;
 using api.Interfaces;
 using api.Mappers;
 using api.Models.Dtos;
 using api.Models.Requests;
 using api.Models.Responses;
+using api.Utils;
 
 namespace api.Services;
 
@@ -27,14 +29,14 @@ public class UserService : IUserService
     public async Task<UserResponse> GetByEmailAsync(string email)
     {
         var user = await _userRepository.GetUserByEmailAsync(email);
-        if (user is null) throw new Exception("Usuário não encontrado");
+        UserValidator.UserNotFound(user);
         return UserMapper.ToResponse(user);
     }
 
     public async Task<UserResponse> GetByIdAsync(Guid id)
     {
         var user = await _userRepository.GetUserByIdAsync(id);
-        if (user is null) throw new Exception("Usuário não encontrado");
+        UserValidator.UserNotFound(user);
         return UserMapper.ToResponse(user);
     }
     
@@ -47,7 +49,7 @@ public class UserService : IUserService
         try
         {
             var search = await _userRepository.GetUserByEmailAsync(newUser.Email);
-            if (search is not null) throw new Exception("Email já registrado");
+            UserValidator.EmailAlreadyInUse(search);
         
             await _userRepository.RegisterUser(newUser);
             const string SUBJECT = "Nova conta";
@@ -58,7 +60,7 @@ public class UserService : IUserService
         }
         catch (Exception ex)
         {
-            throw new Exception("Não foi possível registrar o usuário: " + ex.Message);
+            throw new CustomException(HttpStatusCode.UnprocessableEntity, "Não foi possível registrar o usuário: " + ex.Message);
         }
     }
 
@@ -68,7 +70,7 @@ public class UserService : IUserService
         if (!user.Email.Equals(request.Email))
         {
             var search = await _userRepository.GetUserByEmailAsync(request.Email);
-            if (search is not null) throw new Exception("Não foi possível adicionar o email informado (já existe uma conta vinculada)");
+            UserValidator.EmailAlreadyInUse(search);
         }
         user.Email = request.Email;
         user.Name = request.Name;
@@ -85,7 +87,41 @@ public class UserService : IUserService
         }
         catch (Exception ex)
         {
-            throw new Exception("Não foi possível editar o usuário: " + ex.Message);
+            throw new CustomException(HttpStatusCode.UnprocessableEntity, "Não foi possível editar o usuário: " + ex.Message);
+        }
+    }
+
+    public async Task<UserResponse> DeactivateAsync(Guid id)
+    {
+        var user = await _userRepository.GetUserByIdAsync(id);
+        UserValidator.UserNotFound(user);
+        UserValidator.UserAlreadyInactive(user);
+        user.IsActive = false;
+        try
+        {
+            await _userRepository.EditUser(user);
+            return UserMapper.ToResponse(user);
+        }
+        catch (Exception ex)
+        {
+            throw new CustomException(HttpStatusCode.UnprocessableEntity, "Não foi possível desativar o usuário: " + ex.Message);
+        }
+    }
+
+    public async Task<UserResponse> ReactivateAsync(Guid id)
+    {
+        var user = await _userRepository.GetUserByIdAsync(id);
+        UserValidator.UserNotFound(user);
+        UserValidator.UserAlreadyActive(user);
+        user.IsActive = true;
+        try
+        {
+            await _userRepository.EditUser(user);
+            return UserMapper.ToResponse(user);
+        }
+        catch (CustomException ex)
+        {
+            throw new CustomException(HttpStatusCode.UnprocessableEntity, "Não foi possível reativar o usuário: " + ex.Message);
         }
     }
 }
