@@ -32,7 +32,7 @@ public class ExceptionMiddleware
         HttpStatusCode status = HttpStatusCode.InternalServerError;
         var message = "An internal server error occurred.";
 
-        if (exception is CustomException customException)
+        if (exception.InnerException is CustomException customException)
         {
             status = customException.StatusCode;
             message = customException.Message;

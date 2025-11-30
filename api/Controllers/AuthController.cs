@@ -21,4 +21,11 @@ public class AuthController : ControllerBase
         await _authService.GenerateToken(request);
         return Ok();
     }
+
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] LoginRequest request)
+    {
+        var token = await _authService.Login(request);
+        return Ok(token);
+    }
 }

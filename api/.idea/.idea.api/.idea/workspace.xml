@@ -10,13 +10,13 @@
   <component name="ChangeListManager">
     <list default="true" id="887f4530-7e3d-4648-9d02-4ebff1201aa1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces/ISendEmailService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/ISendEmailService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20251120231445_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20251120231445_Initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IAuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/ExceptionMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/ExceptionMiddleware.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/SendEmailService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/SendEmailService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/api.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +31,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/251361482a1fa2bee4c1279ae3327ec461c81eac80b589209b48dc04f9b/LoginRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/918aa32966267955c2bcd6ecbee8af7ab7d84b7cb6cef6443c7b1cd33546d6e/AuthorizationMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bde5a0e5fb6491e71267549d64518746e9cfebd10d35f355da6815637e3c/AuthenticationMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Contexts/DataContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Models/Dtos/EmailDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Dtos/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Requests/LoginRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Requests/TokenRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Requests/UserRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Requests/UserUpdateRequest.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,6 +59,7 @@
     <setting file="file://$PROJECT_DIR$/Services/JwtService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/SendEmailService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Utils/LoginValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Utils/PasswordGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Utils/UserValidator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -72,7 +77,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.api: http.executor": "Run",
+    ".NET Launch Settings Profile.api: http.executor": "Debug",
     "HTTP Request.api | #1.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -85,7 +90,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.environmentSetup",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -146,7 +151,7 @@
       <workItem from="1763431065085" duration="1227000" />
       <workItem from="1763525622716" duration="5902000" />
       <workItem from="1763611551518" duration="2365000" />
-      <workItem from="1764471609828" duration="3298000" />
+      <workItem from="1764471609828" duration="8367000" />
     </task>
     <servers />
   </component>
@@ -172,6 +177,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/AuthService.cs</url>
+          <line>31</line>
+          <properties documentPath="C:\Users\edson\projetos\projeto-estrela\api\Services\AuthService.cs" containingFunctionPresentation="Method 'GenerateToken'">
+            <startOffsets>
+              <option value="964" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1061" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

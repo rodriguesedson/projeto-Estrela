@@ -1,12 +1,14 @@
 using api.Interfaces;
 using api.Models.Requests;
 using api.Models.Responses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers;
 
 [ApiController]
 [Route("users")]
+[Authorize(Roles = "Admin")]
 public class UserController: ControllerBase
 {
     private readonly IUserService _userService;
@@ -41,6 +43,7 @@ public class UserController: ControllerBase
     }
 
     [HttpPut("/edit/{id}")]
+    [Authorize(Roles = "Admin,Student")]
     public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UserUpdateRequest request)
     {
         return Ok(await _userService.UpdateAsync(id, request));
