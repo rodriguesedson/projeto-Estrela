@@ -4,5 +4,5 @@ namespace api.Interfaces;
 
 public interface ISendEmailService
 {
-     void SendTestMessage(EmailDto email);
+     void SendMessage(EmailDto email);
 }

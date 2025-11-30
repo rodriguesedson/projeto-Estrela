@@ -14,7 +14,7 @@ public class SendEmailService : ISendEmailService
         _configuration = configuration;
     }
 
-    public void SendTestMessage(EmailDto emailDto)
+    public void SendMessage(EmailDto emailDto)
     {
         var credentials = _configuration.GetSection("Credentials");
         var from = new MailAddress(credentials["From"]);

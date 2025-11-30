@@ -40,7 +40,19 @@ namespace api.Migrations
                     b.Property<int>("Role")
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateTime?>("TempPasswordExpiresAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TempPasswordHash")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("TempPasswordUsed")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });

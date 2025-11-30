@@ -55,7 +55,7 @@ public class UserService : IUserService
             const string SUBJECT = "Nova conta";
             const string BODY = "Nova conta criada com sucesso! Use o email cadastrado para acessá-la";
             var newEmail = new EmailDto(newUser.Email, SUBJECT, BODY);
-            _emailService.SendTestMessage(newEmail);
+            _emailService.SendMessage(newEmail);
             return UserMapper.ToResponse(newUser);
         }
         catch (Exception ex)
@@ -82,7 +82,7 @@ public class UserService : IUserService
             const string SUBJECT = "Edição de cadastro";
             const string BODY = "Conta editada com sucesso! Use o email cadastrado para acessá-la";
             var newEmail = new EmailDto(user.Email, SUBJECT, BODY);
-            _emailService.SendTestMessage(newEmail);
+            _emailService.SendMessage(newEmail);
             return  UserMapper.ToResponse(user);
         }
         catch (Exception ex)
