@@ -8,7 +8,12 @@ public static class UserMapper
 {
     public static User ToEntity(UserRequest request)
     {
-        return new User(request.Email, request.Name, request.BirthDate);
+        return new User()
+        {
+            Email = request.Email, 
+            Name = request.Name, 
+            BirthDate = request.BirthDate
+        };
     }
 
     public static UserResponse ToResponse(User user)
