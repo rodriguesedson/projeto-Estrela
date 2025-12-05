@@ -6,6 +6,6 @@ Conheça mais sobre o Projeto Estrela em https://www.instagram.com/projetoestrel
 
 ## Projetos neste repositório:
 
-[Frontend]("./app")
+[Frontend](app)
 
-[Backend]("./api")
+[Backend](api)
