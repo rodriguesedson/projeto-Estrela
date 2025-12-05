@@ -10,19 +10,6 @@
   <component name="ChangeListManager">
     <list default="true" id="887f4530-7e3d-4648-9d02-4ebff1201aa1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contexts/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contexts/DataContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IAuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20251130034233_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20251130034233_Initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Requests/TokenRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Requests/PasswordRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/AuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/api.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../app/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +156,7 @@
       <workItem from="1763611551518" duration="2365000" />
       <workItem from="1764471609828" duration="8762000" />
       <workItem from="1764480616684" duration="61000" />
-      <workItem from="1764898493454" duration="7744000" />
+      <workItem from="1764898493454" duration="7861000" />
     </task>
     <servers />
   </component>

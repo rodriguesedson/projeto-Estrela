@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+# Estrutura do aplicativo web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Login (Instrutor/Aluno)
+- parte 1: Email
+- parte 2: Senha (enviada por e-mail)
 
-Currently, two official plugins are available:
+Obs.: Cadastro de novos alunos realizado pelo instrutor
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instrutor
 
-## React Compiler
+### Calendário
+- seleção de datas
+    - lista de turmas e horários do dia selecionado
+        - página da turma selecionada
+            - chamada realizada/pendente
+            - lista de alunos e status
+                - chamada realizada (presente/ausente)
+                - chamada pendente (pendente)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Chamada
+- perfil do aluno
+    - foto, nome e idade
+    - opções: presente/ausente
 
-## Expanding the ESLint configuration
+### Turma
+- lista de turmas
+    - perfil da turma
+        - nome, idade, dias da semana e horário
+        - lista de alunos na turma
+        - adicionar alunos
+        - remover alunos
+- adicionar nova turma
+    - nome, modalidade, dias da semana e horário
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Aluno
+- lista de alunos
+    - perfil do aluno
+        - foto, nome, idade e histórico de turmas
+        - editar conta
+        - desativar/desativar conta
+- cadastrar aluno
+    - Nome, data de nascimento, foto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Relatório
+- seleção de mês/ano
+    - lista de turmas
+        - gerar relatório
+            - dia/mês, alunos, status (presente/ausente), total de aulas no mês (com frequência registrada) e total de frequências por aluno
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Aluno
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Perfil
+- nome, foto, idade, histórico de turmas
