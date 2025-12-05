@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace api.Controllers;
 
 [ApiController]
-[Route("users")]
+[Route("user")]
 [Authorize(Roles = "Admin")]
 public class UserController: ControllerBase
 {
@@ -16,6 +16,20 @@ public class UserController: ControllerBase
     public UserController(IUserService userService)
     {
         _userService = userService;
+    }
+    
+    [HttpPost("/register")]
+    [AllowAnonymous]
+    public async Task<IActionResult> Register([FromBody] UserRequest request)
+    {
+        return Ok(await _userService.RegisterAsync(request));
+    }
+    
+    [HttpPut("/edit/{id}")]
+    [Authorize(Roles = "Admin,Student")]
+    public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UserUpdateRequest request)
+    {
+        return Ok(await _userService.UpdateAsync(id, request));
     }
 
     [HttpGet]
@@ -35,19 +49,6 @@ public class UserController: ControllerBase
     {
         return await _userService.GetByIdAsync(id);
     }
-    
-    [HttpPost("/register")]
-    public async Task<IActionResult> Register([FromBody] UserRequest request)
-    {
-        return Ok(await _userService.RegisterAsync(request));
-    }
-
-    [HttpPut("/edit/{id}")]
-    [Authorize(Roles = "Admin,Student")]
-    public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UserUpdateRequest request)
-    {
-        return Ok(await _userService.UpdateAsync(id, request));
-    }
 
     [HttpPut("/deactivate/{id}")]
     public async Task<IActionResult> Deactivate([FromRoute] Guid id)
@@ -55,7 +56,7 @@ public class UserController: ControllerBase
         return Ok(await _userService.DeactivateAsync(id));
     }
 
-    [HttpPut("/reactivate/{id}")]
+    [HttpPut("/activate/{id}")]
     public async Task<IActionResult> Reactivate([FromRoute] Guid id)
     {
         return Ok(await _userService.ReactivateAsync(id));

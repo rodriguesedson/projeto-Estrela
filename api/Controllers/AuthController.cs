@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace api.Controllers;
 
 [ApiController]
-[Route("api/auth")]
+[Route("auth")]
 public class AuthController : ControllerBase
 {
     private readonly IAuthService _authService;
@@ -15,10 +15,10 @@ public class AuthController : ControllerBase
         _authService = authService;
     }
 
-    [HttpPost("token")]
-    public async Task<IActionResult> GenerateToken([FromBody] TokenRequest request)
+    [HttpPost("password")]
+    public async Task<IActionResult> GeneratePassword([FromBody] PasswordRequest request)
     {
-        await _authService.GenerateToken(request);
+        await _authService.GeneratePassword(request);
         return Ok();
     }
 

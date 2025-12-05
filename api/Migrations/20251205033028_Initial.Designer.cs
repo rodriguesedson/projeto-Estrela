@@ -11,7 +11,7 @@ using api.Contexts;
 namespace api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20251130034233_Initial")]
+    [Migration("20251205033028_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -19,6 +19,31 @@ namespace api.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.11");
+
+            modelBuilder.Entity("api.Entities.ProjectClass", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.PrimitiveCollection<string>("Days")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<TimeOnly>("Time")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("ProjectClasses");
+                });
 
             modelBuilder.Entity("api.Entities.User", b =>
                 {
@@ -40,6 +65,9 @@ namespace api.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid?>("ProjectClassId")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Role")
                         .HasColumnType("INTEGER");
 
@@ -57,7 +85,21 @@ namespace api.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
+                    b.HasIndex("ProjectClassId");
+
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("api.Entities.User", b =>
+                {
+                    b.HasOne("api.Entities.ProjectClass", null)
+                        .WithMany("Students")
+                        .HasForeignKey("ProjectClassId");
+                });
+
+            modelBuilder.Entity("api.Entities.ProjectClass", b =>
+                {
+                    b.Navigation("Students");
                 });
 #pragma warning restore 612, 618
         }

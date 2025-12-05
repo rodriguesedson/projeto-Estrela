@@ -60,6 +60,8 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ISendEmailService, SendEmailService>();
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IProjectClassService, ProjectClassService>();
+builder.Services.AddScoped<IProjectClassRepository, ProjectClassRepository>();
 
 var key = Encoding.UTF8.GetBytes(configuration["Jwt:Key"]);
 builder.Services.AddAuthentication(options =>

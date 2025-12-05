@@ -18,7 +18,12 @@ public class AuthService : IAuthService
     private readonly IConfiguration _configuration;
     private readonly IJwtService _jwtService;
 
-    public AuthService(DataContext context, IPasswordHasher<User> hasher, ISendEmailService sendEmailService, IConfiguration configuration, IJwtService jwtService)
+    public AuthService(
+        DataContext context, 
+        IPasswordHasher<User> hasher, 
+        ISendEmailService sendEmailService, 
+        IConfiguration configuration, 
+        IJwtService jwtService)
     {
         _context = context;
         _hasher = hasher;
@@ -27,7 +32,7 @@ public class AuthService : IAuthService
         _jwtService = jwtService;
     }
 
-    public async Task GenerateToken(TokenRequest request)
+    public async Task GeneratePassword(PasswordRequest request)
     {
         var user = await _context.Users.SingleOrDefaultAsync(u => u.Email.CompareTo(request.Email) == 0);
         if (user is null) throw new CustomException(HttpStatusCode.Unauthorized, "Credenciais inválidas");

@@ -4,6 +4,6 @@ namespace api.Interfaces;
 
 public interface IAuthService
 {
-    Task GenerateToken(TokenRequest request);
+    Task GeneratePassword(PasswordRequest request);
     Task<string> Login(LoginRequest request);
 }

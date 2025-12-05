@@ -1,6 +1,6 @@
 namespace api.Models.Requests;
 
-public class TokenRequest
+public class PasswordRequest
 {
     public string Email { get; set; }
 }
