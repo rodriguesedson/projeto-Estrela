@@ -18,8 +18,8 @@ public class ProjectClassController : ControllerBase
         _projectClassService = projectClassService;
     }
 
-    [HttpPost("/new")]
-    public async Task<IActionResult> Register([FromBody] RegisterClassRequest request)
+    [HttpPost("register")]
+    public async Task<IActionResult> Register([FromBody] RegisterClassRequestDto request)
     {
         await _projectClassService.Register(request);
 

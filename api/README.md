@@ -3,6 +3,15 @@
 ## Endpoints
 
 ### 1 Auth
+- cadastrar: ``POST /auth/register``
+  - body: {"email": "string@example.com", "name": "string", "birthdate": "aaaa-mm-dd"}
+  ````c#
+  {
+      "email": "user@example.com",
+      "name": "string",
+      "birthDate": "2025-12-05"
+  }
+  ````
 - gerar senha: ``POST /auth/password``
     - body: 
     ````c#
@@ -21,15 +30,6 @@
 
 ### 2 User
 - Admin
-    - cadastrar: ``POST /user/register``
-        - body: {"email": "string@example.com", "name": "string", "birthdate": "aaaa-mm-dd"}
-        ````c#
-        {
-            "email": "user@example.com",
-            "name": "string",
-            "birthDate": "2025-12-05"
-        }
-        ````
     - listar: ``GET /user``
     - buscar por email: ``GET /user/find/email/{email}``
     - buscar por id: ``GET /user/find/id/{id}``

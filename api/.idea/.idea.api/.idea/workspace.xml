@@ -9,8 +9,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="887f4530-7e3d-4648-9d02-4ebff1201aa1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../app/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contexts/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../infrastructure/Infrastructure/Contexts/DataContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ProjectClassController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ProjectClassController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomException/CustomException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/CustomException/CustomException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enums/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Enums/Role.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IAuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IJwtService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IJwtService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IProjectClassRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IProjectClassRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IProjectClassService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IProjectClassService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/ISendEmailService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/ISendEmailService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Interfaces/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mappers/ProjectClassMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Mappers/ProjectClassMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mappers/UserMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Mappers/UserMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20251205033028_Initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20251205033028_Initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/DataContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Dtos/EmailDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Dtos/EmailDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Dtos/UserDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../infrastructure/Infrastructure/Dtos/UserDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Entities/ProjectClass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Entities/ProjectClass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Domain/Entities/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Requests/LoginRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Dtos/Requests/LoginRequestDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Requests/PasswordRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Dtos/Requests/PasswordRequestDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Requests/RegisterClassRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Dtos/Requests/RegisterClassRequestDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Requests/UserRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Dtos/Requests/UserRequestDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Requests/UserUpdateRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Dtos/Requests/UserUpdateRequestDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Responses/UserResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Dtos/Responses/UserResponseDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/ProjectClassRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../infrastructure/Infrastructure/Repositories/ProjectClassRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../infrastructure/Infrastructure/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../infrastructure/Infrastructure/Services/AuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/JwtService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Services/JwtService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ProjectClassService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Services/ProjectClassService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/SendEmailService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../infrastructure/Infrastructure/Services/SendEmailService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/LoginValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../infrastructure/Infrastructure/Utils/LoginValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/PasswordGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../infrastructure/Infrastructure/Utils/PasswordGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/UserValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/Utils/UserValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.sln" beforeDir="false" afterPath="$PROJECT_DIR$/api.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,42 +69,42 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/879e3173b4f82be9a07b4366bcbf46161cc43f2bd9e494df2d923810e3c48/ControllerActionInvoker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/918aa32966267955c2bcd6ecbee8af7ab7d84b7cb6cef6443c7b1cd33546d6e/AuthorizationMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bde5a0e5fb6491e71267549d64518746e9cfebd10d35f355da6815637e3c/AuthenticationMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contexts/DataContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/CustomException/CustomException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Dtos/Requests/LoginRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Dtos/Requests/PasswordRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Dtos/Requests/RegisterClassRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Dtos/Requests/UserRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Dtos/Requests/UserUpdateRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Dtos/Responses/UserResponseDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Interfaces/IAuthService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Interfaces/IJwtService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Interfaces/IProjectClassRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Interfaces/IProjectClassService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Interfaces/ISendEmailService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Interfaces/IUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Interfaces/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Mappers/ProjectClassMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Mappers/UserMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Services/JwtService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Services/ProjectClassService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/Utils/UserValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Domain/Dtos/EmailDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Domain/Entities/ProjectClass.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Domain/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Domain/Enums/Role.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/ProjectClassController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CustomException/CustomException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Enums/Role.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Interfaces/IAuthService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Interfaces/IJwtService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Interfaces/IProjectClassRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Interfaces/IProjectClassService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Interfaces/ISendEmailService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Interfaces/IUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Interfaces/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Mappers/ProjectClassMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Mappers/UserMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Middlewares/ExceptionMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Dtos/EmailDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Dtos/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Entities/ProjectClass.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Requests/LoginRequest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Requests/PasswordRequest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Requests/RegisterClassRequest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Requests/UserRequest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Requests/UserUpdateRequest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Responses/UserResponse.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repositories/ProjectClassRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/AuthService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/JwtService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/ProjectClassService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/SendEmailService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Utils/LoginValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Utils/PasswordGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Utils/UserValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../infrastructure/Infrastructure/Contexts/DataContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../infrastructure/Infrastructure/Dtos/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../infrastructure/Infrastructure/Repositories/ProjectClassRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../infrastructure/Infrastructure/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../infrastructure/Infrastructure/Services/AuthService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../infrastructure/Infrastructure/Services/SendEmailService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../infrastructure/Infrastructure/Utils/LoginValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../infrastructure/Infrastructure/Utils/PasswordGenerator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -78,25 +118,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.api: http.executor": "Run",
-    "HTTP Request.api | #1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "develop",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.api: http.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.api | #1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys_rider&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.api: http">
     <configuration name="api | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/api.http" executionIdentifier="#1" runType="Run single request">
       <method v="2" />
@@ -157,6 +197,7 @@
       <workItem from="1764471609828" duration="8762000" />
       <workItem from="1764480616684" duration="61000" />
       <workItem from="1764898493454" duration="7861000" />
+      <workItem from="1765161332844" duration="4242000" />
     </task>
     <servers />
   </component>
